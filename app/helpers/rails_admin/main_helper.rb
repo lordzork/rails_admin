@@ -34,7 +34,7 @@ module RailsAdmin
     end
 
     def render_table_cell_value(value)
-      if request.user_agent =~ /MSIE 9/ && value.class == String
+      if request.user_agent =~ /MSIE/ && value.class == String
         truncate(value, :length => 35)
       else
         value
